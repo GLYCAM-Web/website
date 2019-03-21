@@ -1,0 +1,5 @@
+Began testing Taiga-GitHub integration.
+  Integration exists, though it has limits.
+  Issues can be added via GiHub, and those issues statuses can be edited via git commit messages.
+  Limits exist though: git commit messages could not add a comment, only change the status.
+  Currently testing comments and status changes to issues generated within Taiga.
