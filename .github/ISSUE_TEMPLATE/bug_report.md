@@ -7,11 +7,15 @@ assignees: ''
 
 ---
 
-**Describe the bug**
+**Tool:**
+Please tell us which tool you were using when you spotted the bug.
+
+**Bug Description:**
 A clear and concise description of what the bug is.
 
-**To Reproduce**
-Steps to reproduce the behavior:
+**To Reproduce:**
+Please give us as many details as possible, so we can reproduce the bug. Bugs that cannot be reproduced are challenging to fix.
+
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
