@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Tool:**
-Please tell us which tool you were using when you spotted the bug.
+Please tell us which tool you were using when you spotted the bug. Bonus points for including the URL: this can tell us if you were using stable or beta code, which really helps us address issues.
 
 **Bug Description:**
 A clear and concise description of what the bug is.
