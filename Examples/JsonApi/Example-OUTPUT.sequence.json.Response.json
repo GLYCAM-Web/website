@@ -1,0 +1,1 @@
+{"entity": {"type": "Sequence"}, "responses": [{"SequenceEvaluation": {"type": "Evaluate", "outputs": [{"SequenceValidation": {"SequenceIsValid": true}}, {"BuildOptions": {"options": [{"Linkages": [{"3": {"likelyRotamers": {"Omega": ["gg", "gt"]}, "linkageName": "DManpa1-6DManpa", "possibleRotamers": {"Omega": ["gg", "gt"]}}}]}]}}]}}]}

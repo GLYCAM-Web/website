@@ -1,0 +1,1 @@
+{"entity": {"type": "Sequence"}, "responses": [{"SequenceEvaluation": {"type": "Evaluate", "outputs": [{"SequenceValidation": {"SequenceIsValid": true}}, {"BuildOptions": {"options": [{"Linkages": [null]}]}}]}}, {"Build3DStructure": {"payload": "612fb97e-87dd-4dec-9686-d09de67ca966"}}]}

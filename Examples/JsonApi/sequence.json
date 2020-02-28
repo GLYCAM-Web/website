@@ -1,0 +1,18 @@
+{ 
+    "entity" : 
+    { 
+        "type": "Sequence", 
+        "services" : 
+        [ 
+            { "Evaluate" :  
+                {"type" : "Evaluate"}
+            } 
+        ], 
+        "inputs" : 
+        [ 
+            { "Sequence" : 
+                { "payload" : "DManpa1-6DManpa1-OH" } 
+            } 
+        ] 
+    }
+}
