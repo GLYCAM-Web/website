@@ -1,0 +1,38 @@
+{
+	"entity" :
+	{
+		"type": "Conjugate",
+		"services" :
+		[
+			{ "Build" :
+				{ "type" : "BuildGlycoprotein" }
+			}
+		],
+		"inputs" :
+		[
+			{ "pdb_ID" : "2V95" },
+			{ "attachments" : [
+					{
+						"glycan" : "Man9",
+						"chain" : "A",
+						"residue_number" : "66"
+					},
+					{
+						"glycan" : "Man9",
+						"chain" : "A",
+						"residue_number" : "194"
+					},
+					{
+						"glycan" : "Man9",
+						"chain" : "A",
+						"residue_number" : "230"
+					}
+				]
+			}
+		]
+	},
+	"options" :
+	{
+		"json_api_version" : "0.0.1"
+	}
+}

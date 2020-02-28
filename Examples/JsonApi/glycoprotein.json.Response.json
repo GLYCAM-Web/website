@@ -1,0 +1,1 @@
+{"entity": {"type": "Conjugate"}, "responses": [{"PreprocessPdbForAmber": {"payload": "92a79d15-4ca1-47a1-b5f1-83f97bf7ba9d"}}, {"BuildGlycoprotein": {"project_status": "submitted", "payload": "92a79d15-4ca1-47a1-b5f1-83f97bf7ba9d", "downloadUrl": "http://192.168.160.2/json/download/gp/92a79d15-4ca1-47a1-b5f1-83f97bf7ba9d"}}]}

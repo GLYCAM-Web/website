@@ -2,19 +2,19 @@ USAGE
 
 For secure connections - e.g., to a live website:
 
-	api-https.bash <website-url>  <json-input-file>
+	bash api-https.bash <website-url>  <json-input-file>
 
 	For exmaple:
 
-		api-https.bash  dev.glycam.org sequence.json
+		bash api-https.bash  dev.glycam.org sequence.json
 
 For insecure connections - e.g., a local dev environment:
 
-	api-insecure.bash <ip-address>  <json-input-file>
+	bash api-insecure.bash <ip-address>  <json-input-file>
 
 	For exmaple:
 
-		api-insecure.bash 192.168.46.22 sequence.json
+		bash api-insecure.bash 192.168.46.22 sequence.json
 
 Sample input json:
 
