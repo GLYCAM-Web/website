@@ -1,3 +1,26 @@
+#USAGE
+
+##For secure connections 
+e.g., to a live website:
+
+	`bash api-https.bash <website-url>  <json-input-file>`
+
+	For exmaple:
+
+		`bash api-https.bash  dev.glycam.org sequence.json`
+
+##For insecure connections e
+e.g., a local dev environment:
+
+	`bash api-insecure.bash <ip-address>  <json-input-file>`
+
+	For exmaple:
+
+		`bash api-insecure.bash 192.168.46.22 sequence.json`
+
+#Files in this directory
+
+Sample input json:
 
 * build-sequence.json
 * marco.json
