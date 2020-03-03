@@ -18,7 +18,7 @@ e.g., a local dev environment:
 
 		`bash api-insecure.bash 192.168.46.22 sequence.json`
 
-#F iles in this directory
+# Files in this directory
 
 Sample input json:
 
