@@ -50,13 +50,13 @@ To retrieve your file(s), you can:
 
 ## Example:  using curl on the command line
 
-To save a file with the filename set by the website, use:
+To save a file with filename molecule.pdb, set by the website, use:
 
-`curl -J -O [URL]`
+`curl -L -o molecule.pdb [URL]`
 
 for example:
 
-`curl -J -O http://dev.glycam.org/json/download/cb/132acfa6-2518-4b0a-b7fa-80f3bebb1881`
+`curl -L -o molecule.pdb http://dev.glycam.org/json/download/cb/132acfa6-2518-4b0a-b7fa-80f3bebb1881`
 
 Do be certain that there is not already a file with the same name in your directory.
 
