@@ -1,1 +1,8 @@
-{"entity": {"type": "Delegator"}, "responses": [{"payload": "Polo"}]}
+{
+	"entity": {
+		"type": "Delegator"
+	},
+	"responses": [{
+		"payload": "Polo"
+	}]
+}

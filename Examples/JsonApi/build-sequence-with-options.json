@@ -1,0 +1,55 @@
+{
+	"entity": {
+		"type": "Sequence",
+		"services": {
+			"build": {
+				"type": "Build3DStructure"
+			}
+		},
+		"inputs": {
+			"sequence": {
+				"payload": "DNeu5Aca2-6DGalpb1-4DGlcpNAcb1-2DManpa1-3[DGlcpNAcb1-4][DManpa1-3DManpa1-6]DManpb1-4DGlcpNAcb1-4DGlcpNAcb1-OH"
+			},
+		       	"geometryOptions": {
+				"linkages": {
+					"linkageRotamersList":{
+					       "linkageRotamerData" : [
+						{
+							"indexOrderedLabel": "8",
+							"linkageLabel": "8",
+							"selectedRotamers": [
+								{
+									"dihedralName": "omg",
+									"dihedralValues": [
+										"gg", "gt" ]
+								}
+							]
+						},
+						{
+							"indexOrderedLabel": "6",
+							"linkageLabel": "6",
+							"selectedRotamers": [
+								{
+									"dihedralName": "omg",
+									"dihedralValues": [
+										"gg", "gt", "tg" ]
+								},
+								{
+									"dihedralName": "phi",
+									"dihedralValues": [
+										"t", "-g" ]
+								}
+							]
+						}
+
+						],
+					"totalLikelyRotamers": 12,
+					"totalPossibleRotamers": 18
+					}
+			    	}
+			}
+		}
+	},
+	"prettyPrint" : true,
+	"mdMinimize" : false
+}

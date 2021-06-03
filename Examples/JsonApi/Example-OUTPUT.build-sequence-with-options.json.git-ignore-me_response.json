@@ -1,0 +1,408 @@
+{
+	"timestamp": null,
+	"entity": {
+		"entityType": "Sequence",
+		"requestID": null,
+		"services": {
+			"build": {
+				"typename": "Build3DStructure",
+				"givenName": null,
+				"myUuid": null,
+				"inputs": null,
+				"options": null
+			}
+		},
+		"responses": null,
+		"resources": null,
+		"notices": null,
+		"options": null,
+		"inputs": {
+			"sequence": {
+				"payload": "DNeu5Aca2-6DGalpb1-4DGlcpNAcb1-2DManpa1-3[DGlcpNAcb1-4][DManpa1-3DManpa1-6]DManpb1-4DGlcpNAcb1-4DGlcpNAcb1-OH",
+				"sequenceFormat": "GlycamCondensed"
+			},
+			"sequenceVariants": null,
+			"systemSolvationOptions": null,
+			"geometryOptions": {
+				"residues": null,
+				"linkages": {
+					"linkageRotamerInfo": null
+				}
+			},
+			"buildOptions": {
+				"solvationOptions": null,
+				"geometryOptions": null,
+				"mdMinimize": false,
+				"numberStructuresHardLimit": null
+			},
+			"evaluationOptions": null,
+			"drawOptions": null
+		},
+		"outputs": {
+			"sequenceEvaluationOutput": {
+				"sequenceIsValid": true,
+				"sequenceVariants": {
+					"indexOrdered": "DNeu5Aca2-6DGalpb1-4DGlcpNAcb1-2DManpa1-3[DGlcpNAcb1-4][DManpa1-3DManpa1-6]DManpb1-4DGlcpNAcb1-4DGlcpNAcb1-OH",
+					"longestChainOrdered": "DNeu5Aca2-6DGalpb1-4DGlcpNAcb1-2DManpa1-3[DGlcpNAcb1-4][DManpa1-3DManpa1-6]DManpb1-4DGlcpNAcb1-4DGlcpNAcb1-OH",
+					"userOrdered": "DNeu5Aca2-6DGalpb1-4DGlcpNAcb1-2DManpa1-3[DGlcpNAcb1-4][DManpa1-3DManpa1-6]DManpb1-4DGlcpNAcb1-4DGlcpNAcb1-OH",
+					"monospacedTextDiagram": null,
+					"indexOrderedLabeled": "DNeu5Ac&Label=residue-8;a2-6&Label=link-6;DGalp&Label=residue-7;b1-4&Label=link-5;DGlcpNAc&Label=residue-6;b1-2&Label=link-4;DManp&Label=residue-5;a1-3&Label=link-3;[DGlcpNAc&Label=residue-9;b1-4&Label=link-7;][DManp&Label=residue-11;a1-3&Label=link-9;DManp&Label=residue-10;a1-6&Label=link-8;]DManp&Label=residue-4;b1-4&Label=link-2;DGlcpNAc&Label=residue-3;b1-4&Label=link-1;DGlcpNAc&Label=residue-2;b1&Label=link-0;-OH&Label=residue-1;",
+					"longestChainOrderedLabeled": null,
+					"userOrderedLabeled": null,
+					"monospacedTextDiagramLabeled": null,
+					"suuid": null,
+					"smd5sum": null
+				},
+				"evaluationOptions": {
+					"validateOnly": false,
+					"evaluateForBuild": true,
+					"noBuild": false
+				},
+				"buildOptions": {
+					"solvationOptions": null,
+					"geometryOptions": {
+						"residues": null,
+						"linkages": {
+							"linkageRotamerInfo": {
+								"singleLinkageRotamerDataList": [{
+									"indexOrderedLabel": "6",
+									"linkageLabel": null,
+									"linkageName": "DNeu5Acpa2-6DGalpb",
+									"firstResidueNumber": "8",
+									"secondResidueNumber": "7",
+									"dihedralsWithOptions": ["Phi", "Omg"],
+									"possibleRotamers": [{
+										"dihedralName": "Phi",
+										"dihedralValues": ["t", "-g"]
+									}, {
+										"dihedralName": "Omg",
+										"dihedralValues": ["gg", "gt", "tg"]
+									}],
+									"likelyRotamers": [{
+										"dihedralName": "Phi",
+										"dihedralValues": ["t", "-g"]
+									}, {
+										"dihedralName": "Omg",
+										"dihedralValues": ["gg", "gt", "tg"]
+									}],
+									"selectedRotamers": [{
+										"dihedralName": "Phi",
+										"dihedralValues": ["t", "-g"]
+									}, {
+										"dihedralName": "Omg",
+										"dihedralValues": ["gg", "gt", "tg"]
+									}]
+								}, {
+									"indexOrderedLabel": "8",
+									"linkageLabel": null,
+									"linkageName": "DManpa1-6DManpb",
+									"firstResidueNumber": "10",
+									"secondResidueNumber": "4",
+									"dihedralsWithOptions": ["Omg"],
+									"possibleRotamers": [{
+										"dihedralName": "Omg",
+										"dihedralValues": ["gg", "gt", "tg"]
+									}],
+									"likelyRotamers": [{
+										"dihedralName": "Omg",
+										"dihedralValues": ["gg", "gt"]
+									}],
+									"selectedRotamers": [{
+										"dihedralName": "Omg",
+										"dihedralValues": ["gg", "gt"]
+									}]
+								}],
+								"totalLikelyRotamers": 12,
+								"totalPossibleRotamers": 18,
+								"totalSelectedRotamers": 0
+							}
+						}
+					},
+					"mdMinimize": false,
+					"numberStructuresHardLimit": 64
+				},
+				"drawOptions": null
+			},
+			"structureBuildInfo": {
+				"incomingSequence": "DNeu5Aca2-6DGalpb1-4DGlcpNAcb1-2DManpa1-3[DGlcpNAcb1-4][DManpa1-3DManpa1-6]DManpb1-4DGlcpNAcb1-4DGlcpNAcb1-OH",
+				"indexOrderedSequence": "DNeu5Aca2-6DGalpb1-4DGlcpNAcb1-2DManpa1-3[DGlcpNAcb1-4][DManpa1-3DManpa1-6]DManpb1-4DGlcpNAcb1-4DGlcpNAcb1-OH",
+				"seqID": "d06e2853-bcac-5b86-9cc6-9644fa1abf3a",
+				"individualBuildDetails": [{
+					"date": "2021-06-03T15:26:40.212612",
+					"status": "new",
+					"payload": "",
+					"incomingSequence": "",
+					"indexOrderedSequence": "",
+					"seqID": "",
+					"conformerID": "6ht_ogg_8ogg",
+					"conformerLabel": "6ht_ogg_8ogg",
+					"sequenceConformation": ["6", "h", "t", "6", "o", "gg", "8", "o", "gg"],
+					"isDefaultStructure": true,
+					"structureDirectoryName": "6ht_ogg_8ogg",
+					"subDirectory": "",
+					"downloadUrl": "http://test.glycam.org/json/download/cb/6ht_ogg_8ogg",
+					"simulationPhase": "gas_phase",
+					"solvationShape": null,
+					"addIons": "default",
+					"energy": null,
+					"forceField": "See Build Directory Files"
+				}, {
+					"date": "2021-06-03T15:26:40.212612",
+					"status": "new",
+					"payload": "",
+					"incomingSequence": "",
+					"indexOrderedSequence": "",
+					"seqID": "",
+					"conformerID": "6ht_ogg_8ogt",
+					"conformerLabel": "6ht_ogg_8ogt",
+					"sequenceConformation": ["6", "h", "t", "6", "o", "gg", "8", "o", "gt"],
+					"isDefaultStructure": false,
+					"structureDirectoryName": "6ht_ogg_8ogt",
+					"subDirectory": "",
+					"downloadUrl": "http://test.glycam.org/json/download/cb/6ht_ogg_8ogt",
+					"simulationPhase": "gas_phase",
+					"solvationShape": null,
+					"addIons": "default",
+					"energy": null,
+					"forceField": "See Build Directory Files"
+				}, {
+					"date": "2021-06-03T15:26:40.212612",
+					"status": "new",
+					"payload": "",
+					"incomingSequence": "",
+					"indexOrderedSequence": "",
+					"seqID": "",
+					"conformerID": "6ht_ogt_8ogg",
+					"conformerLabel": "6ht_ogt_8ogg",
+					"sequenceConformation": ["6", "h", "t", "6", "o", "gt", "8", "o", "gg"],
+					"isDefaultStructure": false,
+					"structureDirectoryName": "6ht_ogt_8ogg",
+					"subDirectory": "",
+					"downloadUrl": "http://test.glycam.org/json/download/cb/6ht_ogt_8ogg",
+					"simulationPhase": "gas_phase",
+					"solvationShape": null,
+					"addIons": "default",
+					"energy": null,
+					"forceField": "See Build Directory Files"
+				}, {
+					"date": "2021-06-03T15:26:40.212612",
+					"status": "new",
+					"payload": "",
+					"incomingSequence": "",
+					"indexOrderedSequence": "",
+					"seqID": "",
+					"conformerID": "6ht_ogt_8ogt",
+					"conformerLabel": "6ht_ogt_8ogt",
+					"sequenceConformation": ["6", "h", "t", "6", "o", "gt", "8", "o", "gt"],
+					"isDefaultStructure": false,
+					"structureDirectoryName": "6ht_ogt_8ogt",
+					"subDirectory": "",
+					"downloadUrl": "http://test.glycam.org/json/download/cb/6ht_ogt_8ogt",
+					"simulationPhase": "gas_phase",
+					"solvationShape": null,
+					"addIons": "default",
+					"energy": null,
+					"forceField": "See Build Directory Files"
+				}, {
+					"date": "2021-06-03T15:26:40.212612",
+					"status": "new",
+					"payload": "",
+					"incomingSequence": "",
+					"indexOrderedSequence": "",
+					"seqID": "",
+					"conformerID": "6ht_otg_8ogg",
+					"conformerLabel": "6ht_otg_8ogg",
+					"sequenceConformation": ["6", "h", "t", "6", "o", "tg", "8", "o", "gg"],
+					"isDefaultStructure": false,
+					"structureDirectoryName": "6ht_otg_8ogg",
+					"subDirectory": "",
+					"downloadUrl": "http://test.glycam.org/json/download/cb/6ht_otg_8ogg",
+					"simulationPhase": "gas_phase",
+					"solvationShape": null,
+					"addIons": "default",
+					"energy": null,
+					"forceField": "See Build Directory Files"
+				}, {
+					"date": "2021-06-03T15:26:40.212612",
+					"status": "new",
+					"payload": "",
+					"incomingSequence": "",
+					"indexOrderedSequence": "",
+					"seqID": "",
+					"conformerID": "6ht_otg_8ogt",
+					"conformerLabel": "6ht_otg_8ogt",
+					"sequenceConformation": ["6", "h", "t", "6", "o", "tg", "8", "o", "gt"],
+					"isDefaultStructure": false,
+					"structureDirectoryName": "6ht_otg_8ogt",
+					"subDirectory": "",
+					"downloadUrl": "http://test.glycam.org/json/download/cb/6ht_otg_8ogt",
+					"simulationPhase": "gas_phase",
+					"solvationShape": null,
+					"addIons": "default",
+					"energy": null,
+					"forceField": "See Build Directory Files"
+				}, {
+					"date": "2021-06-03T15:26:40.212612",
+					"status": "new",
+					"payload": "",
+					"incomingSequence": "",
+					"indexOrderedSequence": "",
+					"seqID": "",
+					"conformerID": "6h-g_ogg_8ogg",
+					"conformerLabel": "6h-g_ogg_8ogg",
+					"sequenceConformation": ["6", "h", "-g", "6", "o", "gg", "8", "o", "gg"],
+					"isDefaultStructure": false,
+					"structureDirectoryName": "6h-g_ogg_8ogg",
+					"subDirectory": "",
+					"downloadUrl": "http://test.glycam.org/json/download/cb/6h-g_ogg_8ogg",
+					"simulationPhase": "gas_phase",
+					"solvationShape": null,
+					"addIons": "default",
+					"energy": null,
+					"forceField": "See Build Directory Files"
+				}, {
+					"date": "2021-06-03T15:26:40.212612",
+					"status": "new",
+					"payload": "",
+					"incomingSequence": "",
+					"indexOrderedSequence": "",
+					"seqID": "",
+					"conformerID": "6h-g_ogg_8ogt",
+					"conformerLabel": "6h-g_ogg_8ogt",
+					"sequenceConformation": ["6", "h", "-g", "6", "o", "gg", "8", "o", "gt"],
+					"isDefaultStructure": false,
+					"structureDirectoryName": "6h-g_ogg_8ogt",
+					"subDirectory": "",
+					"downloadUrl": "http://test.glycam.org/json/download/cb/6h-g_ogg_8ogt",
+					"simulationPhase": "gas_phase",
+					"solvationShape": null,
+					"addIons": "default",
+					"energy": null,
+					"forceField": "See Build Directory Files"
+				}, {
+					"date": "2021-06-03T15:26:40.212612",
+					"status": "new",
+					"payload": "",
+					"incomingSequence": "",
+					"indexOrderedSequence": "",
+					"seqID": "",
+					"conformerID": "6h-g_ogt_8ogg",
+					"conformerLabel": "6h-g_ogt_8ogg",
+					"sequenceConformation": ["6", "h", "-g", "6", "o", "gt", "8", "o", "gg"],
+					"isDefaultStructure": false,
+					"structureDirectoryName": "6h-g_ogt_8ogg",
+					"subDirectory": "",
+					"downloadUrl": "http://test.glycam.org/json/download/cb/6h-g_ogt_8ogg",
+					"simulationPhase": "gas_phase",
+					"solvationShape": null,
+					"addIons": "default",
+					"energy": null,
+					"forceField": "See Build Directory Files"
+				}, {
+					"date": "2021-06-03T15:26:40.212612",
+					"status": "new",
+					"payload": "",
+					"incomingSequence": "",
+					"indexOrderedSequence": "",
+					"seqID": "",
+					"conformerID": "6h-g_ogt_8ogt",
+					"conformerLabel": "6h-g_ogt_8ogt",
+					"sequenceConformation": ["6", "h", "-g", "6", "o", "gt", "8", "o", "gt"],
+					"isDefaultStructure": false,
+					"structureDirectoryName": "6h-g_ogt_8ogt",
+					"subDirectory": "",
+					"downloadUrl": "http://test.glycam.org/json/download/cb/6h-g_ogt_8ogt",
+					"simulationPhase": "gas_phase",
+					"solvationShape": null,
+					"addIons": "default",
+					"energy": null,
+					"forceField": "See Build Directory Files"
+				}, {
+					"date": "2021-06-03T15:26:40.212612",
+					"status": "new",
+					"payload": "",
+					"incomingSequence": "",
+					"indexOrderedSequence": "",
+					"seqID": "",
+					"conformerID": "6h-g_otg_8ogg",
+					"conformerLabel": "6h-g_otg_8ogg",
+					"sequenceConformation": ["6", "h", "-g", "6", "o", "tg", "8", "o", "gg"],
+					"isDefaultStructure": false,
+					"structureDirectoryName": "6h-g_otg_8ogg",
+					"subDirectory": "",
+					"downloadUrl": "http://test.glycam.org/json/download/cb/6h-g_otg_8ogg",
+					"simulationPhase": "gas_phase",
+					"solvationShape": null,
+					"addIons": "default",
+					"energy": null,
+					"forceField": "See Build Directory Files"
+				}, {
+					"date": "2021-06-03T15:26:40.212612",
+					"status": "new",
+					"payload": "",
+					"incomingSequence": "",
+					"indexOrderedSequence": "",
+					"seqID": "",
+					"conformerID": "6h-g_otg_8ogt",
+					"conformerLabel": "6h-g_otg_8ogt",
+					"sequenceConformation": ["6", "h", "-g", "6", "o", "tg", "8", "o", "gt"],
+					"isDefaultStructure": false,
+					"structureDirectoryName": "6h-g_otg_8ogt",
+					"subDirectory": "",
+					"downloadUrl": "http://test.glycam.org/json/download/cb/6h-g_otg_8ogt",
+					"simulationPhase": "gas_phase",
+					"solvationShape": null,
+					"addIons": "default",
+					"energy": null,
+					"forceField": "See Build Directory Files"
+				}],
+				"buildStrategyID": "buildStrategyID1"
+			}
+		}
+	},
+	"project": {
+		"pUUID": "b6076423-23e1-41e5-b494-62de85d817c5",
+		"title": "",
+		"comment": "",
+		"timestamp": null,
+		"gems_timestamp": "2021-06-03T15:26:38.940594",
+		"project_type": "cb",
+		"parent_entity": "Sequence",
+		"requested_service": "Build3DStructure",
+		"filesystem_path": "/website/userdata/",
+		"compute_cluster_filesystem_path": "",
+		"entity_id": "sequence",
+		"service_id": "cb",
+		"service_dir": "/website/userdata/sequence/cb",
+		"project_dir": "/website/userdata/sequence/cb/Builds/b6076423-23e1-41e5-b494-62de85d817c5",
+		"logs_dir": "/website/userdata/sequence/cb/Builds/b6076423-23e1-41e5-b494-62de85d817c5/logs",
+		"requesting_agent": "",
+		"has_input_files": false,
+		"site_version": "49e5b1113affa8e6bd34729d01eb28606a6eae8e",
+		"site_branch": "master",
+		"gems_version": "38cf60d73b389ce7ed2c075483bf84cb90ef3b97",
+		"gems_branch": "gems-dev",
+		"md_utils_version": "4e0395c9a9472ed7a957268350f7bacdf77196c8",
+		"md_utils_branch": "main",
+		"gmml_version": "64b7f394fe4cc80fca4f6600a5b3340443588e95",
+		"gmml_branch": "gmml-dev",
+		"gp_version": "0228f03c36aa44a731abfcb387cedd4069558a61",
+		"gp_branch": "stable",
+		"site_mode": "SWARM",
+		"site_host_name": "test.glycam.org",
+		"versions_file_path": "/website/userdata/VERSIONS.sh",
+		"download_url_path": "http://test.glycam.org/json/download/cb/b6076423-23e1-41e5-b494-62de85d817c5",
+		"force_field": "default",
+		"parameter_version": "default",
+		"amber_version": "default",
+		"json_api_version": "",
+		"django_project_id": "",
+		"notices": [],
+		"sequence_id": "d06e2853-bcac-5b86-9cc6-9644fa1abf3a",
+		"sequence_path": "/website/userdata/sequence/cb/Sequences/d06e2853-bcac-5b86-9cc6-9644fa1abf3a"
+	},
+	"prettyPrint": true,
+	"mdMinimize": false,
+	"options": null,
+	"notices": []
+}

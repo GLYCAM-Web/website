@@ -1,0 +1,133 @@
+{
+	"timestamp": null,
+	"entity": {
+		"entityType": "Sequence",
+		"requestID": null,
+		"services": {
+			"build": {
+				"typename": "Evaluate",
+				"givenName": null,
+				"myUuid": null,
+				"inputs": null,
+				"options": null
+			}
+		},
+		"responses": null,
+		"resources": null,
+		"notices": null,
+		"options": null,
+		"inputs": {
+			"sequence": {
+				"payload": "DManpa1-6DManpa1-OH",
+				"sequenceFormat": "GlycamCondensed"
+			},
+			"sequenceVariants": null,
+			"systemSolvationOptions": null,
+			"geometryOptions": null,
+			"buildOptions": null,
+			"evaluationOptions": null,
+			"drawOptions": null
+		},
+		"outputs": {
+			"sequenceEvaluationOutput": {
+				"sequenceIsValid": true,
+				"sequenceVariants": {
+					"indexOrdered": "DManpa1-6DManpa1-OH",
+					"longestChainOrdered": "DManpa1-6DManpa1-OH",
+					"userOrdered": "DManpa1-6DManpa1-OH",
+					"monospacedTextDiagram": null,
+					"indexOrderedLabeled": "DManp&Label=residue-3;a1-6&Label=link-1;DManp&Label=residue-2;a1&Label=link-0;-OH&Label=residue-1;",
+					"longestChainOrderedLabeled": null,
+					"userOrderedLabeled": null,
+					"monospacedTextDiagramLabeled": null,
+					"suuid": null,
+					"smd5sum": null
+				},
+				"evaluationOptions": {
+					"validateOnly": false,
+					"evaluateForBuild": false,
+					"noBuild": false
+				},
+				"buildOptions": {
+					"solvationOptions": null,
+					"geometryOptions": {
+						"residues": null,
+						"linkages": {
+							"linkageRotamerInfo": {
+								"singleLinkageRotamerDataList": [{
+									"indexOrderedLabel": "1",
+									"linkageLabel": null,
+									"linkageName": "DManpa1-6DManpa",
+									"firstResidueNumber": "3",
+									"secondResidueNumber": "2",
+									"dihedralsWithOptions": ["Omg"],
+									"possibleRotamers": [{
+										"dihedralName": "Omg",
+										"dihedralValues": ["gg", "gt", "tg"]
+									}],
+									"likelyRotamers": [{
+										"dihedralName": "Omg",
+										"dihedralValues": ["gg", "gt"]
+									}],
+									"selectedRotamers": []
+								}],
+								"totalLikelyRotamers": 2,
+								"totalPossibleRotamers": 3,
+								"totalSelectedRotamers": 0
+							}
+						}
+					},
+					"mdMinimize": true,
+					"numberStructuresHardLimit": null
+				},
+				"drawOptions": null
+			},
+			"structureBuildInfo": null
+		}
+	},
+	"project": {
+		"pUUID": "c0e88a05-1763-435a-9419-ed45ab1ea986",
+		"title": "",
+		"comment": "",
+		"timestamp": null,
+		"gems_timestamp": "2021-06-03T14:21:20.242669",
+		"project_type": "cb",
+		"parent_entity": "Sequence",
+		"requested_service": "",
+		"filesystem_path": "/website/userdata/",
+		"compute_cluster_filesystem_path": "",
+		"entity_id": "",
+		"service_id": "",
+		"service_dir": "",
+		"project_dir": "",
+		"logs_dir": "",
+		"requesting_agent": "",
+		"has_input_files": false,
+		"site_version": "49e5b1113affa8e6bd34729d01eb28606a6eae8e",
+		"site_branch": "master",
+		"gems_version": "38cf60d73b389ce7ed2c075483bf84cb90ef3b97",
+		"gems_branch": "gems-dev",
+		"md_utils_version": "4e0395c9a9472ed7a957268350f7bacdf77196c8",
+		"md_utils_branch": "main",
+		"gmml_version": "64b7f394fe4cc80fca4f6600a5b3340443588e95",
+		"gmml_branch": "gmml-dev",
+		"gp_version": "0228f03c36aa44a731abfcb387cedd4069558a61",
+		"gp_branch": "stable",
+		"site_mode": "SWARM",
+		"site_host_name": "test.glycam.org",
+		"versions_file_path": "/website/userdata/VERSIONS.sh",
+		"download_url_path": "",
+		"force_field": "default",
+		"parameter_version": "default",
+		"amber_version": "default",
+		"json_api_version": "",
+		"django_project_id": "",
+		"notices": [],
+		"sequence_id": "",
+		"sequence_path": ""
+	},
+	"prettyPrint": false,
+	"mdMinimize": true,
+	"options": null,
+	"notices": []
+}
