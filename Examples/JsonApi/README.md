@@ -10,7 +10,7 @@ At this point it is possible to:
 * Submit a new request for up to 64 variations of this structure.
 
 ## Submitting Requests To The API
-# For secure connections
+### For secure connections
 e.g., to a live website:
 
 	`bash api-https.bash <json-input-file> <website-url>`
@@ -19,7 +19,7 @@ e.g., to a live website:
 
 		`bash api-https.bash  dev.glycam.org sequence.json`
 
-# For insecure connections
+### For insecure connections
 e.g., a local dev environment:
 
 	`bash api-insecure.bash <json-input-file> <ip-address>`
@@ -28,7 +28,7 @@ e.g., a local dev environment:
 
 		`bash api-insecure.bash 192.168.46.22 sequence.json`
 
-# Files in this directory
+### Sample input files
 
 Sample input json:
 
@@ -42,7 +42,7 @@ Sample output json:
 * Example-OUTPUT.marco.json.Response.json
 * Example-OUTPUT.sequence.json.Response.json
 
-# Using the output
+## Using the output
 
 Look in the file containing sample output from build-sequence.json.  Inside,
 you will find a section like this:
@@ -58,7 +58,7 @@ To retrieve your file(s), you can:
 * Enter the downloadUrl into a browser window.
 * Use wget or curl or some other command line tool.
 
-## Example:  using curl on the command line
+### Example:  using curl on the command line
 
 To save a file with filename molecule.pdb, set by the website, use:
 
