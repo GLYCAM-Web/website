@@ -5,9 +5,10 @@ Initial requests to build a pdb file generate responses with two features:
 * A download url for a pdb describing the requested structure, with default options.
 * Information about options available for this structure.
 
-At this point it is possible to:
+Armed with a response to the orifinal request it is possible to:
 * Poll for the status of the default pdb file.
-* Submit a new request for up to 64 variations of this structure.
+* Submit a new request for up to 64 variations of this structures
+* Each requested structure can then be polled for and downloaded as well.
 
 ## Submitting Requests To The API
 ### For secure connections
@@ -69,7 +70,7 @@ simulation.
 
 ## Using the output
 Responses contain entities. Entities reflect the request (inputs), and provide
-any response (outputs):
+any responses (outputs):
 
 ### Inputs
 ```python
