@@ -15,7 +15,7 @@ A typical pattern might involve:
 3. When the desired file exists, request the file as an attachment in a response.
 
 An in-depth walkthrough of one way this might happen is provided in the
-[Appendix](#walkthrough:-default-structure)
+[Appendix: Walkthrough](#walkthrough)
 
 
 Armed with a response to the orifinal request it is possible to:
@@ -197,7 +197,8 @@ Do be certain that there is not already a file with the same name in your direct
 
 #Appendix
 
-## Walkthrough: Default Structure
+## Walkthrough
+# Default Structure
 Key concept: Default structure is a value we use. If you are unconcerned with which
 conformation your file represents, ANY conformerID found in a response is good.
 
