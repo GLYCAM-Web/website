@@ -1,6 +1,19 @@
 # USAGE
 
 ## Overview
+The JSON API provides an interface to the services made available by GEMS and GMML.
+
+We make html requests to the api's urls, often providing json-formatted input, GEMS
+interprets requests, determines which service(s) are appropriate to provide,
+and the api returns json formatted responses.
+
+A typical pattern might involve:
+1. Evaluate some sequence to determine if it can be built, and if any options are
+    available for that sequence.
+2. Request the build status of either the default build, or one of the builds listed
+    in the evaluate response.
+3. When the desired file exists, request the file as an attachment in a response.
+
 Initial requests to build a pdb file generate responses with two features:
 * A download url for a pdb describing the requested structure, with default options.
 * Information about options available for this structure.
@@ -16,37 +29,19 @@ e.g., to a live website:
 
 	`bash api-https.bash <json-input-file> <website-url>`
 
-	For example:
+#### Example:
 
-		`bash api-https.bash sequence.json dev.glycam.org`
-        or
-        `bash api-https.bash sequence.json test.glycam.org`
+	`bash api-https.bash sequence.json dev.glycam.org`
 
-### For insecure connections
-e.g., a local dev environment:
-Note that the ip address is optional. If not provided, the script assumes
-a dev context and attempts to connect to a local instance of the site.
-
-	`bash api-insecure.bash <json-input-file> <ip-address>`
-
-	For example:
-
-		`bash api-insecure.bash sequence.json 192.168.46.22`
-
-#### Connecting to a Mac local dev environment:
-    Really, the script is identical except it knows to look at Mac's convention
-    for localhost:8000 if an ip address is not provided in the args.
-
-        `bash mac-api-https.sh <json-input-file> <ip-address>`
 
 
 ### Sample input files
 
 Sample input json:
 
-* marco.json
-* evaluate-sequence.json
-* build-sequence.json
+* [marco.json](marco.json)
+* [evaluate-sequence.json](evaluate-sequence.json)
+* [build-sequence.json](build-sequence.json)
 
 ## Marco
 marco.json is for testing the connection. If you receive a response that says
