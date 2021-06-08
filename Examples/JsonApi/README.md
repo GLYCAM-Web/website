@@ -3,9 +3,9 @@
 ## Overview
 The JSON API provides an interface to the services made available by GEMS and GMML.
 
-We make html requests to the api's urls, often providing json-formatted input, GEMS
-interprets requests, determines which service(s) are appropriate to provide,
-and the api returns json formatted responses.
+We make html requests to the API's urls, often providing json-formatted input. GEMS
+then interprets requests, determines which service(s) are appropriate to provide,
+and the api returns json-formatted responses.
 
 A typical pattern might involve:
 1. Evaluate some sequence to determine if it can be built, and if any options are
@@ -14,9 +14,9 @@ A typical pattern might involve:
     in the evaluate response.
 3. When the desired file exists, request the file as an attachment in a response.
 
-Initial requests to build a pdb file generate responses with two features:
-* A download url for a pdb describing the requested structure, with default options.
-* Information about options available for this structure.
+This is demonstrated in detail below in the Appendix []
+
+
 
 Armed with a response to the orifinal request it is possible to:
 * Poll for the status of the default pdb file.
@@ -31,7 +31,7 @@ e.g., to a live website:
 
 #### Example:
 
-	`bash api-https.bash sequence.json dev.glycam.org`
+	`bash api-https.bash build-sequence.json dev.glycam.org`
 
 
 
@@ -52,10 +52,15 @@ The Evaluate service returns information about options that are available for a
 requested structure.
 
 ## Build3DStructure
-The Build3DStructure service returns very similar information, along with
-download urls for individual structures and/or additional files useful for
-simulation.
+The Build3DStructure service returns very similar information. These requests can
+optionally define build options, if desired. If the default structure is desirable,
+build options can be ignored completely.
 
+Requests to build a pdb file generate responses with two features:
+
+* A download url for a pdb describing the requested structure, with default options.
+* Information about options available for this structure.
+* Values needed to poll the status of any files you plan to download.
 
 ### Sample output json:
 
@@ -117,7 +122,7 @@ For a detailed example of a build request with user options specified, see:
 Given a project ID and a conformer ID, we can check the status of a specific build.
 Using the following url:
 ```
-http://test.glycam.org/cb/build_status/<ProjectID>/<ConformerID>/
+http://dev.glycam.org/cb/build_status/<ProjectID>/<ConformerID>/
 ```
 We can receive a json object like the following:
 ```
@@ -149,29 +154,32 @@ Look in the file containing sample output from build-sequence-with-options.json.
 you will find a section like this:
 
 `   "structureBuildInfo": {
-    "incomingSequence": "DNeu5Aca2-6DGalpb1-4DGlcpNAcb1-2DManpa1-3[DGlcpNAcb1-4][DManpa1-3DManpa1-6]DManpb1-4DGlcpNAcb1-4DGlcpNAcb1-OH",
-    "indexOrderedSequence": "DNeu5Aca2-6DGalpb1-4DGlcpNAcb1-2DManpa1-3[DGlcpNAcb1-4][DManpa1-3DManpa1-6]DManpb1-4DGlcpNAcb1-4DGlcpNAcb1-OH",
-    "seqID": "d06e2853-bcac-5b86-9cc6-9644fa1abf3a",
+    "incomingSequence": "DManpa1-6DManpa1-OH",
+    "indexOrderedSequence": "DManpa1-6DManpa1-OH",
+    "seqID": "8f89c814-df0f-5867-a9d4-fc393bfea61b",
     "individualBuildDetails": [{
-        "date": "2021-06-03T15:26:40.212612",
+        "date": "2021-06-07T10:09:05.908645",
         "status": "new",
         "payload": "",
+        "pUUID": "3c368bf2-ad73-43f3-a18d-d7d2dc11cf28",
+        "entity_id": "sequence",
+        "service_id": "cb",
         "incomingSequence": "",
-        "indexOrderedSequence": "",
+        "indexOrderedSequence": "DManpa1-6DManpa1-OH",
         "seqID": "",
-        "conformerID": "6ht_ogg_8ogg",
-        "conformerLabel": "6ht_ogg_8ogg",
-        "sequenceConformation": ["6", "h", "t", "6", "o", "gg", "8", "o", "gg"],
+        "conformerID": "1ogg",
+        "conformerLabel": "1ogg",
+        "sequenceConformation": ["1", "o", "gg"],
         "isDefaultStructure": true,
-        "structureDirectoryName": "6ht_ogg_8ogg",
-        "subDirectory": "",
-        "downloadUrl": "http://test.glycam.org/json/download/cb/b6076423-23e1-41e5-b494-62de85d817c5/6ht_ogg_8ogg",
-        "simulationPhase": "gas_phase",
-        "solvationShape": null,
-        "addIons": "default",
-        "energy": null,
+        "isNewBuild": false,
+        "structureDirectoryName": "1ogg",
+        "filesystem_path": "/website/userdata/",
+        "host_url_base_path": "https://test.glycam.org",
+        "conformer_path": "/website/userdata/sequence/cb/Builds/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/Requested_Builds/1ogg",
+        "absolute_conformer_path": "/website/userdata/sequence/cb/Builds/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/Existing_Builds/1ogg",
+        "downloadUrlPath": "https://test.glycam.org/json/download/sequence/cb/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/1ogg/",
         "forceField": "See Build Directory Files"
-    },`
+    }, `
 
 The downloadUrl above is used in the following example.
 
@@ -187,3 +195,157 @@ for example:
 `curl -L -o molecule.pdb http://dev.glycam.org/json/download/cb/6076423-23e1-41e5-b494-62de85d817c5/6ht_ogg_8ogg`
 
 Do be certain that there is not already a file with the same name in your directory.
+
+
+#Appendix
+
+## Walkthrough: Default Structure for DManpa1-6DManpa1-OH
+
+1. Create a folder to work in somewhere. I will use:
+`
+ test/
+`
+
+2. Create a new file. You can name it what you like. It will be the command we run to
+start our process. I will call mine
+
+`
+testTheAPI.sh.
+`
+
+3. Copy the contents of this [script](api-https.sh) into your test script.
+
+If you run the script with no arguments, you will get a helpful usage message.
+
+The script you just created accepts an argument for JSON input, and a host. We have
+sample json files that demonstrate the format needed for for requests. Feel free
+to grab these and edit the input as needed.
+
+This walkthrough will demonstrate using [build-sequence.json](build-sequence.json),
+which requests DManpa1-6DManpa1-OH. You can simply replace the sequence and this
+file is valid to request the default structure for any valid sequence.
+
+4. In the same folder as your test script, create a new file. Mine is named
+`
+build-sequence.json.
+`
+
+5. Copy the contents of this [build-sequence.json](build-sequence.json) into your new
+file.
+
+Run the following command to submit your request. Because the script and its
+input are in the same path, I can leave paths out. If youneed to add paths, and
+if you use different file names, remember to edit the following to reflect your
+needs:
+
+```bash
+$ bash testTheApi.sh build-sequence.json dev.glycam.org
+```
+
+If all goes well, you get some chatty logs on your console, followed by a printout
+of your response object. This is also written to file, by the test script we just
+called in the command above. You can edit that if you want different filenames or
+output locations.
+
+There is a lot in the output. These responses serve more purposes than ours, but
+that means we are only interested in two pieces of data:
+
+* pUUID - A key to find the project that your request created. Needed for
+    polling file status.
+* download_url_path for the project -  A URL we can call to download the default structure.
+
+Both of these live in the json object's project. For example:
+```python
+myProject = responseDict['project']['pUUID']
+myDownloadUrl = responseDict['project']['download_url_path']
+```
+6. Poll for the status of the default structure's project files.
+Currently, a conformer ID is required to check build statuses. We find the conformer ID
+of the default structure in the response to our Build3DStructure request.
+
+Note: There is nothing special about the default structure. If you don't care
+which structure, grabbing the first conformerID you find is appropriate.
+
+## Conformer ID Lookup Example:
+Regardless of whether you are looking for the default structure, or have less
+specific needs, examining the output of a build response shows structureBuildInfo
+which contains a list of individual build details. Here, the reasonable values for
+conformerIDs can be found, as well as a boolean to determine the default structure.
+
+
+```"structureBuildInfo": {
+    "incomingSequence": "DManpa1-6DManpa1-OH",
+    "indexOrderedSequence": "DManpa1-6DManpa1-OH",
+    "seqID": "8f89c814-df0f-5867-a9d4-fc393bfea61b",
+    "individualBuildDetails": [{
+        "date": "2021-06-07T10:09:05.908645",
+        "status": "new",
+        "payload": "",
+        "pUUID": "3c368bf2-ad73-43f3-a18d-d7d2dc11cf28",
+        "entity_id": "sequence",
+        "service_id": "cb",
+        "incomingSequence": "",
+        "indexOrderedSequence": "DManpa1-6DManpa1-OH",
+        "seqID": "",
+        "conformerID": "1ogg",
+        "conformerLabel": "1ogg",
+        "sequenceConformation": ["1", "o", "gg"],
+        "isDefaultStructure": true,
+        "isNewBuild": false,
+        "structureDirectoryName": "1ogg",
+        "filesystem_path": "/website/userdata/",
+        "host_url_base_path": "https://dev.glycam.org",
+        "conformer_path": "/website/userdata/sequence/cb/Builds/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/Requested_Builds/1ogg",
+        "absolute_conformer_path": "/website/userdata/sequence/cb/Builds/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/Existing_Builds/1ogg",
+        "downloadUrlPath": "https://dev.glycam.org/json/download/sequence/cb/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/1ogg/",
+        "forceField": "See Build Directory Files"
+    },
+```
+The above snippet shows how responses offer conformerIDs, downloadUrlPath, pUUID
+
+We provide a sample script that you can use to poll for the status of the file you requested.
+7. Create a new file, mine is named,
+`
+checkStatus.sh
+`
+8. Copy the content of [checkStatus.sh](checkStatus.sh) into your new script.
+
+9. In the response to your original request, find the pUUID for your project, and
+grab an appropriate conformerID.
+
+10. Run the script with your selected args. The script will echo out the status
+response, and also writes it out to file. Feel free to customize.
+
+
+```bash
+$ bash checkStatus.sh <pUUID> <conformerID>
+```
+My example would be:
+
+```bash
+$ bash checkStatus.sh a997768f-6097-4aa6-9789-c756252358df 1ogg
+```
+
+11. Examine the response to find the status.
+This status indicates all is complete. If you are wanting verification that it has
+been minimized, minExists will return true when minimization is finished.
+
+## Example Status Response
+```
+{
+	"minExists": true,
+	"tip3pExists": true,
+	"tip5pExists": true,
+	"conformerID": "1ogg",
+	"status": "All complete"
+}
+```
+
+12. Download the default structure (Or whichever structure you choose)
+Just as the checkStatus script is simply a curl request sent to the appropriate url,
+downloads are the same. We can make curl requests, or place the download url in
+a browser, etc... The thing you need is the: downloadUrlPath from a Build3DStructure response.
+
+A request made to https://dev.glycam.org/json/download/sequence/cb/<pUUID>/<conformerID>/
+will return a minimized pdb file for that structure if it exists. The values in
+responses' downloadUrlPath all follow this pattern, and may be all you need.
