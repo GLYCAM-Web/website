@@ -14,8 +14,8 @@ A typical pattern might involve:
     in the evaluate response.
 3. When the desired file exists, request the file as an attachment in a response.
 
-This is demonstrated in detail below in the Appendix []
-
+An in-depth walkthrough of one way this might happen is provided in the
+[Appendix](#Walkthrough: Default Structure for DManpa1-6DManpa1-OH)
 
 
 Armed with a response to the orifinal request it is possible to:
@@ -24,16 +24,12 @@ Armed with a response to the orifinal request it is possible to:
 * Each requested structure can then be polled for and downloaded as well.
 
 ## Submitting Requests To The API
-### For secure connections
-e.g., to a live website:
 
 	`bash api-https.bash <json-input-file> <website-url>`
 
-#### Example:
+### Example:
 
 	`bash api-https.bash build-sequence.json dev.glycam.org`
-
-
 
 ### Sample input files
 
@@ -43,6 +39,7 @@ Sample input json:
 * [evaluate-sequence.json](evaluate-sequence.json)
 * [build-sequence.json](build-sequence.json)
 
+# Services
 ## Marco
 marco.json is for testing the connection. If you receive a response that says
 "polo", you are good.
@@ -92,8 +89,9 @@ For a detailed example, see:
 ### Build3DStructure service output
 The Build3DStructure service can be used both with and without build options
 defined. In the case where no options are provided in the request, responses
-will provide a full evaluation, along with structureBuildInfo for accessing pdb
-files for specific conformations.
+will provide:
+* a full evaluation,
+* structureBuildInfo for accessing pdb files for specific conformations.
 
 #### Build without setting options
 For example, the provided example request in build-sequence.json does not set
@@ -106,7 +104,7 @@ For a detailed example of a build request with no user options, see:
 * Example-OUTPUT.build-sequence.Response.json
 
 #### Build with options
-However, one can set many options, and request up to 64 variations of a structure.
+One can set many options, and request up to 64 variations of a structure.
 This involves:
 1. Submitting an original request to retrieve the possible options
 for your sequence, (as demonstrated, evaluate, or build requests suffice for this)
@@ -200,6 +198,9 @@ Do be certain that there is not already a file with the same name in your direct
 #Appendix
 
 ## Walkthrough: Default Structure for DManpa1-6DManpa1-OH
+Key concept: Default structure is a value we use. If you are unconcerned with which
+conformation your file represents, ANY conformerID found in a response is good.
+
 
 1. Create a folder to work in somewhere. I will use:
 `
@@ -259,6 +260,7 @@ Both of these live in the json object's project. For example:
 myProject = responseDict['project']['pUUID']
 myDownloadUrl = responseDict['project']['download_url_path']
 ```
+
 6. Poll for the status of the default structure's project files.
 Currently, a conformer ID is required to check build statuses. We find the conformer ID
 of the default structure in the response to our Build3DStructure request.
