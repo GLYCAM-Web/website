@@ -18,8 +18,8 @@ An in-depth walkthrough of one way this might happen is provided in the
 [Appendix: Walkthrough](#walkthrough)
 
 
-Armed with a response to the orifinal request it is possible to:
-* Poll for the status of the default pdb file.
+Armed with a response to the original request it is possible to:
+* Poll for the status of the default PDB file.
 * Submit a new request for up to 64 variations of this structures
 * Each requested structure can then be polled for and downloaded as well.
 
@@ -33,37 +33,36 @@ Armed with a response to the orifinal request it is possible to:
 
 ### Sample input files
 
-Sample input json:
-
 * [marco.json](marco.json)
 * [evaluate-sequence.json](evaluate-sequence.json)
 * [build-sequence.json](build-sequence.json)
 
-# Services
+# Sequence Services
 ## Marco
 marco.json is for testing the connection. If you receive a response that says
 "polo", you are good.
 
 ## Evaluate
 The Evaluate service returns information about options that are available for a
-requested structure.
+requested structure. If you just want to know if we can build a sequence, this might
+be the service you prefer.
 
 ## Build3DStructure
 The Build3DStructure service returns very similar information. These requests can
 optionally define build options, if desired. If the default structure is desirable,
 build options can be ignored completely.
 
-Requests to build a pdb file generate responses with two features:
+Requests to build a PDB file generate responses with two features:
 
-* A download url for a pdb describing the requested structure, with default options.
+* A download url for a PDB describing the requested structure, with default options.
 * Information about options available for this structure.
 * Values needed to poll the status of any files you plan to download.
 
 ### Sample output json:
 
-* Example-OUTPUT.marco.json.Response.json
-* Example-OUTPUT.evaluate-sequence.json.git-ignore-me_response.json
-* Example-OUTPUT.build-sequence.json.git-ignore-me_response.json
+* [Example-OUTPUT.marco.json.Response.json](Example-OUTPUT.marco.json.Response.json)
+* [Example-OUTPUT.evaluate-sequence.json.git-ignore-me_response.json](Example-OUTPUT.evaluate-sequence.json.git-ignore-me_response.json)
+* [Example-OUTPUT.build-sequence.json.git-ignore-me_response.json](Example-OUTPUT.build-sequence.json.git-ignore-me_response.json)
 
 ## Using the output
 Responses contain entities. Entities reflect the request (inputs), and provide
@@ -84,31 +83,33 @@ The evaluate response provides sequence evaluation, e.g. whether or not our
 tools can build it (sequenceIsValid), sequence variants, buildOptions etc...
 
 For a detailed example, see:
-* Example-OUTPUT.evaluate-sequence.Response.json
+* [Example-OUTPUT.evaluate-sequence.Response.json](Example-OUTPUT.evaluate-sequence.Response.json)
 
 ### Build3DStructure service output
-The Build3DStructure service can be used both with and without build options
-defined. In the case where no options are provided in the request, responses
-will provide:
+If you need to download a pdb file for a sequence, you will probably want to start
+with Build3DStructure. The Build3DStructure service can be used both with and
+without build options defined. In the case where no options are provided in the
+request, responses will provide:
 * a full evaluation,
-* structureBuildInfo for accessing pdb files for specific conformations.
+* structureBuildInfo for accessing PDB files for specific conformations.
 
 #### Build without setting options
-For example, the provided example request in build-sequence.json does not set
-any options. The example response provided includes the same evaluation data
-present in the evaluate request, but also provides a url for downloading the
-default structure.
+The provided example request in build-sequence.json does not set any options.
+The example response provided includes the same evaluation data present in the
+evaluate request, but also provides downloadUrlPath values for downloading the
+structures available for that sequence.
 
 For a detailed example of a build request with no user options, see:
-* build-sequence.json
-* Example-OUTPUT.build-sequence.Response.json
+* [build-sequence.json](build-sequence.json)
+* [Example-OUTPUT.build-sequence.Response.json](Example-OUTPUT.build-sequence.Response.json)
 
 #### Build with options
 One can set many options, and request up to 64 variations of a structure.
 This involves:
 1. Submitting an original request to retrieve the possible options
 for your sequence, (as demonstrated, evaluate, or build requests suffice for this)
-2. Submitting a second request, with options,
+2. Submitting a second request, with options set, following the patterns in the
+build response,
 3. Polling the Build_Status url for the status of your builds,
 4. Downloading some or all via the downloadUrl provided in the response.
 
@@ -182,7 +183,8 @@ you will find a section like this:
 The downloadUrl above is used in the following example.
 
 
-### Example:  using curl on the command line
+### Curl Example
+#### Using curl on the command line
 
 To save a file with filename molecule.pdb, set by the website, use:
 
@@ -349,6 +351,9 @@ Just as the checkStatus script is simply a curl request sent to the appropriate 
 downloads are the same. We can make curl requests, or place the download url in
 a browser, etc... The thing you need is the: downloadUrlPath from a Build3DStructure response.
 
+An example curl request made from the command line was provided earlier in this doc:
+[sample curl download](#curl-example)
+
 A request made to https://dev.glycam.org/json/download/sequence/cb/<pUUID>/<conformerID>/
-will return a minimized pdb file for that structure if it exists. The values in
+will return a minimized PDB file for that structure if it exists. The values in
 responses' downloadUrlPath all follow this pattern, and may be all you need.
