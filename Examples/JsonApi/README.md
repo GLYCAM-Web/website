@@ -160,7 +160,7 @@ To retrieve your file(s), you can:
 * Enter the downloadUrl into a browser window.
 * Use wget or curl or some other command line tool.
 
-Look in the file containing [Example-OUTPUT.build-sequence-with-options.Response.json](Example-OUTPUT.build-sequence-with-options.Response.json)  Inside,
+Look in the file containing [Example-OUTPUT.build-sequence-with-options.json](Example-OUTPUT.build-sequence-with-options.json)  Inside,
 you will find a section like this:
 
 ```
@@ -236,7 +236,7 @@ start our process. We will use this, for example:
 `
 testTheAPI.sh.
 `
-3. Copy the contents of this [api-https.sh](api-https.sh) script into your test script. If you run the script with no arguments, you will get a helpful usage message.
+3. Copy the contents of this [api-https.bash](api-https.bash) script into your test script. If you run the script with no arguments, you will get a helpful usage message.
 
 > The script you just created accepts an argument for JSON input, and a host. We have
 sample json files that demonstrate the format needed for for requests. Feel free
