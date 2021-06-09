@@ -339,7 +339,7 @@ $ bash checkStatus.sh a997768f-6097-4aa6-9789-c756252358df 1ogg
 11. Examine the response to find the status. This example status response
 indicates that all files are complete. If you need verification that it has
 been minimized, 'minExists' will only return true when minimization is finished.
-## Example Status Response
+#### Example Status Response
 ```
 {
 	"minExists": true,
@@ -352,11 +352,19 @@ been minimized, 'minExists' will only return true when minimization is finished.
 12. Download the default structure (Or any structure you choose.)
 Just as the checkStatus script is simply a curl request sent to the appropriate url,
 downloads are the same. We can make curl requests, or place the download url in
-a browser, etc... The thing you need is the: downloadUrlPath from a Build3DStructure response.
+a browser, etc...
+
+The downloadUrlPath for the conformer you need is provided in responses to
+Build3DStructure requests. If you desire the default structure, use the ID of the
+individualBuildDetails object who's isDefaultStructure field is true.
 
 An example curl request made from the command line was provided earlier in this doc:
 [sample curl download](#curl-example)
 
-A request made to https://dev.glycam.org/json/download/sequence/cb/<pUUID>/<conformerID>/
+A request made to
+```
+https://dev.glycam.org/json/download/sequence/cb/${pUUID}/${conformerID}/
+```
+
 will return a minimized PDB file for that structure if it exists. The values in
 responses' downloadUrlPath all follow this pattern, and may be all you need.
