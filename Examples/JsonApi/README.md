@@ -59,8 +59,9 @@ Requests to build a PDB file generate responses with these features:
 
 ### Sample output json:
 * [Example-OUTPUT.marco.json.Response.json](Example-OUTPUT.marco.json.Response.json)
-* [Example-OUTPUT.evaluate-sequence.json.git-ignore-me_response.json](Example-OUTPUT.evaluate-sequence.json.git-ignore-me_response.json)
-* [Example-OUTPUT.build-sequence.json.git-ignore-me_response.json](Example-OUTPUT.build-sequence.json.git-ignore-me_response.json)
+* [Example-OUTPUT.evaluate-sequence.Response.json](Example-OUTPUT.evaluate-sequence.Response.json)
+* [Example-OUTPUT.build-sequence.json.Response.json](Example-OUTPUT.build-sequence.json.Response.json)
+* [Example-OUTPUT.build-sequence-with-options.json](Example-OUTPUT.build-sequence-with-options.json)
 
 ## Using the output
 Responses contain entities. Entities reflect the request (inputs), and provide
