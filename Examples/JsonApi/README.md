@@ -126,7 +126,7 @@ build response,
 
 For a detailed example of a build request with user options specified, see:
 * [build-sequence-with-options.json](build-sequence-with-options.json)
-* [Example-OUTPUT.build-sequence-with-options.Response.json](Example-OUTPUT.build-sequence-with-options.Response.json)
+* [Example-OUTPUT.build-sequence-with-options.json](Example-OUTPUT.build-sequence-with-options.json)
 
 ## Polling for the status of a specific build
 Given a project ID and a conformer ID, we can check the status of a specific build.
