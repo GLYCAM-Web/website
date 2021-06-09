@@ -100,7 +100,7 @@ structures available for that sequence.
 
 For a detailed example of a build request with no user options, see:
 * [build-sequence.json](build-sequence.json)
-* [Example-OUTPUT.build-sequence.Response.json](Example-OUTPUT.build-sequence.Response.json)
+* [Example-OUTPUT.build-sequence.json.Response.json](Example-OUTPUT.build-sequence.json.Response.json)
 
 #### Note about default structures
 We do assign a default conformer for each sequence. There is nothing special about
