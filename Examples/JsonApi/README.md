@@ -94,7 +94,7 @@ will provide:
 
 #### Build without setting options
 The example json-formatted request in [build-sequence.json](build-sequence.json) does not set any options.
-The example response in [Example-OUTPUT.build-sequence.Response.json](Example-OUTPUT.build-sequence.Response.json) includes the same evaluation data present in the
+The example response in [Example-OUTPUT.build-sequence.json.Response.json](Example-OUTPUT.build-sequence.json.Response.json) includes the same evaluation data present in the
 evaluate request, but also provides downloadUrlPath values for downloading the
 structures available for that sequence.
 
