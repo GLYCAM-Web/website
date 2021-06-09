@@ -10,18 +10,12 @@ and the api returns json-formatted responses.
 A typical pattern might involve:
 1. Evaluate some sequence to determine if it can be built, and if any options are
     available for that sequence.
-2. Request the build status of either the default build, or one of the builds listed
-    in the evaluate response.
-3. When the desired file exists, request the file as an attachment in a response.
+2. Request that a 3D structure be generated for a sequence, possibly with options for which conformers (shapes) to generate.
+3. Request the build status of either a default shape for the 3D structure, or one of the conformers.
+4. When the desired 3D structure file exists, request the file as an attachment in a response.
 
 An in-depth walkthrough of one way this might happen is provided in the
 [Appendix: Walkthrough](#walkthrough)
-
-
-Armed with a response to the original request it is possible to:
-* Poll for the status of the default PDB file.
-* Submit a new request for up to 64 variations of this structures
-* Each requested structure can then be polled for and downloaded as well.
 
 ## Submitting Requests To The API
 
@@ -49,12 +43,12 @@ be the service you prefer.
 
 ## Build3DStructure
 The Build3DStructure service returns very similar information. These requests can
-optionally define build options, if desired. If the default structure is desirable,
-build options can be ignored completely.
+optionally define build options, if desired. If you only wish to retrieve a "default" 3D structure,
+you can ignore the build options.
 
 Requests to build a PDB file generate responses with two features:
 
-* A download url for a PDB describing the requested structure, with default options.
+* A download url for a PDB file of requested structure, with default options.
 * Information about options available for this structure.
 * Values needed to poll the status of any files you plan to download.
 
@@ -104,7 +98,7 @@ For a detailed example of a build request with no user options, see:
 * [Example-OUTPUT.build-sequence.Response.json](Example-OUTPUT.build-sequence.Response.json)
 
 #### Build with options
-One can set many options, and request up to 64 variations of a structure.
+One can set many options, and request up to 64 conformers (shapes) of a structure.
 This involves:
 1. Submitting an original request to retrieve the possible options
 for your sequence, (as demonstrated, evaluate, or build requests suffice for this)
@@ -202,7 +196,7 @@ Do be certain that there is not already a file with the same name in your direct
 ## Walkthrough
 # Default Structure
 Key concept: Default structure is a value we use. If you are unconcerned with which
-conformation your file represents, ANY conformerID found in a response is good.
+conformation you want, ANY conformerID found in a response is good.
 
 
 1. Create a folder to work in somewhere. I will use:
@@ -238,7 +232,7 @@ build-sequence.json.
 file.
 
 Run the following command to submit your request. Because the script and its
-input are in the same path, I can leave paths out. If youneed to add paths, and
+input are in the same path, I can leave paths out. If you need to add paths, and
 if you use different file names, remember to edit the following to reflect your
 needs:
 
