@@ -131,7 +131,7 @@ For a detailed example of a build request with user options specified, see:
 Given a project ID and a conformer ID, we can check the status of a specific build.
 Using the following url:
 ```
-http://dev.glycam.org/cb/build_status/<ProjectID>/<ConformerID>/
+http://dev.glycam.org/cb/build_status/<pUUID>/<ConformerID>/
 ```
 We can receive a json object like the following:
 ```python
@@ -159,7 +159,7 @@ To retrieve your file(s), you can:
 * Enter the downloadUrl into a browser window.
 * Use wget or curl or some other command line tool.
 
-Look in the file containing [sample output from build-sequence-with-options.json.](Example-OUTPUT.build-sequence-with-options.Response.json)  Inside,
+Look in the file containing [Example-OUTPUT.build-sequence-with-options.Response.json](Example-OUTPUT.build-sequence-with-options.Response.json)  Inside,
 you will find a section like this:
 
 ```
@@ -235,7 +235,7 @@ start our process. We will use this, for example:
 `
 testTheAPI.sh.
 `
-3. Copy the contents of this [script](api-https.sh) into your test script. If you run the script with no arguments, you will get a helpful usage message.
+3. Copy the contents of this [api-https.sh](api-https.sh) script into your test script. If you run the script with no arguments, you will get a helpful usage message.
 
 > The script you just created accepts an argument for JSON input, and a host. We have
 sample json files that demonstrate the format needed for for requests. Feel free
@@ -359,12 +359,11 @@ Build3DStructure requests. If you desire the default structure, use the ID of th
 individualBuildDetails object who's isDefaultStructure field is true.
 
 An example curl request made from the command line was provided earlier in this doc:
-[sample curl download](#curl-example)
+[curl-example](#curl-example)
 
 A request made to
 ```
-https://dev.glycam.org/json/download/sequence/cb/${pUUID}/${conformerID}/
+https://dev.glycam.org/json/download/sequence/cb/<pUUID>/<ConformerID>/
 ```
-
 will return a minimized PDB file for that structure if it exists. The values in
 responses' downloadUrlPath all follow this pattern, and may be all you need.
