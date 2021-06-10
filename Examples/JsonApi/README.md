@@ -39,7 +39,7 @@ services that GEMS provides:
 # Sequence Services
 ## Marco
 marco.json is for testing the connection. If you receive a response that says
-"polo", you are good.
+"polo", you have connected successfully.
 
 ## Evaluate
 The Evaluate service returns json-formatted information about options that are available for a
@@ -257,7 +257,7 @@ just use the filename with no path. If you need to add paths, and if you use
 different file names, remember to edit the following to reflect your needs. Run
 the following command to submit your request:
 ```bash
-$ bash testTheApi.sh build-sequence.json dev.glycam.org
+$ bash testTheAPI.sh build-sequence.json dev.glycam.org
 ```
 > You can expect some chatty logs on your console, followed by a printout
 of your response object. This is also written to file, by the test script we just
