@@ -42,8 +42,8 @@ COMMAND="curl -v  \
 -b cookies.txt \
 --header \"X-CSRFToken: \"${TOKEN} \
 --header \"Content-Type: application/json\" \
-'https://dev.glycam.org/cb/build_status/${pUUID}/${conformerID}/'"
+'https://dev.glycam.org/json/project_status/sequence/${pUUID}/"
 
 echo ${COMMAND}
-eval ${COMMAND} > status.${pUUID}.${conformerID}.git-ignore-me_response.json
-cat status.${pUUID}.${conformerID}.git-ignore-me_response.json
+eval ${COMMAND} > status.${pUUID}.default.Response.json
+cat status.${pUUID}.default.Response.json
