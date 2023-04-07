@@ -1,0 +1,173 @@
+{
+  "main": {
+    "id": "c6926572beb67b06",
+    "type": "split",
+    "children": [
+      {
+        "id": "69d44aaf93c99582",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a5f65e99e8f56eda",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Architecture-Design/README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e4d1ef0d5ddbd7f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "67b822f67f229be9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ad9f45c65ec8f871",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "999015c0dd229b2e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ed35ca83537b68c4",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2bb1cf8c545efbbd",
+    "type": "split",
+    "children": [
+      {
+        "id": "e5f1e2f10971bcd9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ea3d6b4090071ad2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Architecture-Design/README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0e8765b9fa527e72",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Architecture-Design/README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "658b7e03731014d1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "bc2eee7f664afdc8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Architecture-Design/README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "a5f65e99e8f56eda",
+  "lastOpenFiles": [
+    "Architecture-Design/Archimate/html/index.html",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/views/id-4c38ae643e214b6f8c562cb3e3b6f240.html",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/views/id-1be0bccf7bff4822b601ee0edb2524c5.html",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/views/id-2ac1afa93d40453b9aa0b1ab1c54c763.html",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/views/id-4ab78023326146c8bbbd6ef4c833499a.html",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/views/id-faeb9eeb69064a16add79a9b0e0a1840.html",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/views/id-725698b4a81d4914894ad6e68b5792de.html",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/views/id-ddd44a571588466ca7b7075b4a9332fa.html",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/views/id-8096f39d1c5141818f9c1008932b6947.html",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/views/id-ff961566cd6940cb88508517cfba8713.html",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/views/id-93b55d21ff1649d7b1da785fd08d6358.html",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/images/id-4c38ae643e214b6f8c562cb3e3b6f240.png",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/images/id-1be0bccf7bff4822b601ee0edb2524c5.png",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/images/id-2ac1afa93d40453b9aa0b1ab1c54c763.png",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/images/id-4ab78023326146c8bbbd6ef4c833499a.png",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/images/id-faeb9eeb69064a16add79a9b0e0a1840.png",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/images/id-725698b4a81d4914894ad6e68b5792de.png",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/images/id-ddd44a571588466ca7b7075b4a9332fa.png",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/images/id-8096f39d1c5141818f9c1008932b6947.png",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/images/id-ff961566cd6940cb88508517cfba8713.png",
+    "Architecture-Design/Archimate/html/id-4044d88a4b1c4cd58f8a625e380cbc5f/images/id-93b55d21ff1649d7b1da785fd08d6358.png"
+  ]
+}
