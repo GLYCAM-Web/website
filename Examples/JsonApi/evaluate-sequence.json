@@ -1,18 +1,16 @@
 {
-    "entity": {
-        "type": "Sequence",
-        "services":
-            {
-                "build": {
-                    "type": "Evaluate"
-                }
-            },
-        "inputs":
-            {
-                "sequence": {
-                    "payload": "DManpa1-6DManpa1-OH"
-                },
-        "resources" :[]
-            }
-    }
+	"entity": {
+		"type": "Sequence",
+		"services": {
+			"build": {
+				"type": "Evaluate"
+			}
+		},
+		"inputs": {
+			"sequence": {
+				"payload": "DManpa1-6DManpa1-OH"
+			},
+			"resources": []
+		}
+	}
 }
