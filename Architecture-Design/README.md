@@ -10,7 +10,9 @@ These docs are mostly maintained by Lachele Foley.  They began as design docs fo
 
 ### Viewing
 
-The main way to view the docs is with the [Archi software](https://www.archimatetool.com/).  But, an html report of the docs is also available. 
+The best way to view the docs is to open the [main Archi repo](https://github.com/GLYCAM-Web/coArchi-GLYCAM-Web) with the [Archi software](https://www.archimatetool.com/).  See the README.md in the repo for more about doing that.
+
+Periodically, an html report of the docs will be copied into here.
 
 #### Using a web browser to view the html
 
@@ -27,18 +29,11 @@ From a browser window:
 
 Once you have the docs open, expand the "Views" in the "Model Tree" pane.
 
-#### Using Archi to view the archimate file
-
-You might need to read some docs or watch some videos before you can really use this method, but it is the most flexible.  Resources for learning to use Archi are available on the software website.
-
-- Download and install the [Archi software](https://www.archimatetool.com/) 
-- Open the file `website/Architecture-Design/Archimate/GLYCAM-Web.archimate`
-
 ### Naming conventions used herein
 
 Names of views are prefixed with the overall portion of the GLYCAM-Web enterprise that they concern.
 
 - ENTERPRISE:  These views concern at least some portions of systems and software.  They might concern people, motivational factors, etc., as well.
 - GEMS, GMML, MD_Utils:  These views concern these specific code bases.
-- SOFTWARE: These views concern software that we write that is directly related to the business goals of GLYCAM-Web.  
+- SOFTWARE: These views concern relationships between softwares that we write and that are directly related to the business goals of GLYCAM-Web. 
 - SYSTEMS: These views concern software, that might be written by us or by others, and hardware, that are used to support the functions of the business-goal software.
