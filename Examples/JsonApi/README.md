@@ -247,13 +247,13 @@ them to the api. This can be done in many languages. One way might include using
 For detailed doc on how to use curl: 
 [https://curl.se/docs/](https://curl.se/docs/)
 
-To save a file with filename molecule.pdb, set by the website, use:
+To save a file with filename min-gas.pdb, set by the website, use:
 
-`curl -L -o molecule.pdb [URL]`
+`curl -L -o min-gas.pdb [URL]`
 
 for example, to download a specific conformer:
 
-`curl -L -o molecule.pdb https://test.glycam.org/json/download/sequence/cb/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/1ogg/`
+`curl -L -o min-gas.pdb https://test.glycam.org/json/download/sequence/cb/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/1ogg/`
 
 Do be certain that there is not already a file with the same name in your directory.
 
