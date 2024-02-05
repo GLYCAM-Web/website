@@ -33,16 +33,16 @@ fi
 
 
 echo "Checking the status of: pUUID: ${pUUID}, conformerID: ${conformerID}."
-echo "Testing dev.glycam.org"
+echo "Testing glycam.org"
 
-TOKEN=$( curl -v -c cookies.txt -b cookies.txt https://dev.glycam.org/json/getToken/ )
+TOKEN=$( curl -v -c cookies.txt -b cookies.txt https://glycam.org/json/getToken/ )
 
 COMMAND="curl -v  \
 -c cookies.txt \
 -b cookies.txt \
 --header \"X-CSRFToken: \"${TOKEN} \
 --header \"Content-Type: application/json\" \
-'https://dev.glycam.org/json/project_status/sequence/${pUUID}/"
+'https://glycam.org/json/project_status/sequence/${pUUID}/"
 
 echo ${COMMAND}
 eval ${COMMAND} > status.${pUUID}.default.Response.json

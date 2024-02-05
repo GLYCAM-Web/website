@@ -10,20 +10,19 @@ Usage:
 
 ~ JSON_INPUT is required. It should be the path to your json request file.
 
-~ HOST is also required. This is usually dev.glycam.org, but might also be
-   glycam.org in a future release.
+~ HOST is also required. This is glycam.org (unless you've been told to use e.g. test.glycam.org).
 
 
 Examples:
 
    Evaluate:
-   bash api-http.sh evaluate-sequence.json dev.glycam.org
+   bash api-http.sh evaluate-sequence.json glycam.org
 
    Build Default:
-   bash api-http.sh build-sequence.json dev.glycam.org
+   bash api-http.sh build-sequence.json glycam.org
 
    Build w/Options:
-   bash api-http.sh build-sequence-with-options.json dev.glycam.org
+   bash api-http.sh build-sequence-with-options.json glycam.org
 
 
 Output:

@@ -19,7 +19,7 @@ NOTE: For now, if a test requires an upload file, use file_api-http.sh Currently
 
 Example:
 
-   bash api-http.sh cb/evaluate_sequence.json dev.glycam.org
+   bash api-http.sh cb/evaluate_sequence.json glycam.org
 
 
 USAGE
