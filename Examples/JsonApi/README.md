@@ -29,8 +29,9 @@ json api.
 
 ### Example:
 
-	`bash api-https.bash build-sequence.json dev.glycam.org`
+	`bash api-https.bash build-sequence.json glycam.org`
 
+(Note that variations like www.glycam.org do not work.)
 ### Sample input files
 Our sample input files demonstrate the json input format for making requests to
 services that GEMS provides:
@@ -136,7 +137,7 @@ All you need to check the status of the default structure is the pUUID returned 
 to your Build3DStructure request. 
 Using the following url:
 ```
-http://dev.glycam.org/json/project_status/sequence/<str:pUUID>/
+https://glycam.org/json/project_status/sequence/<str:pUUID>/
 
 ```
 We can receive a json object like the following:
@@ -154,7 +155,7 @@ You might also see other statuses such as:
 Given a pUUID and a conformer ID, we can check the status of a specific build.
 Using the following url:
 ```
-http://dev.glycam.org/json/build_status/<str:pUUID>/<str:conformerID>/
+https://glycam.org/json/build_status/<str:pUUID>/<str:conformerID>/
 ```
 We can receive a json object like the following:
 ```python
@@ -191,7 +192,7 @@ is all you need.
 In the [Curl Example below](Curl_Example), you would edit [URL] to be:
 ```
 
-http://dev.glycam.org/json/download/sequence/cb/<pUUID>/
+https://glycam.org/json/download/sequence/cb/<pUUID>/
 ```
 This downloads the minimized pdb file for the default structure.
 
@@ -223,10 +224,10 @@ You will find a section like this:
             "isNewBuild": false,
             "structureDirectoryName": "1ogg",
             "filesystem_path": "/website/userdata/",
-            "host_url_base_path": "https://test.glycam.org",
+            "host_url_base_path": "https://glycam.org",
             "conformer_path": "/website/userdata/sequence/cb/Builds/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/Requested_Builds/1ogg",
             "absolute_conformer_path": "/website/userdata/sequence/cb/Builds/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/Existing_Builds/1ogg",
->>>>>>>>>>> "downloadUrlPath": "https://test.glycam.org/json/download/sequence/cb/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/1ogg/",
+>>>>>>>>>>> "downloadUrlPath": "https://glycam.org/json/download/sequence/cb/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/1ogg/",
             "forceField": "See Build Directory Files"
         },
         ...  
@@ -253,7 +254,7 @@ To save a file with filename min-gas.pdb, set by the website, use:
 
 for example, to download a specific conformer:
 
-`curl -L -o min-gas.pdb https://test.glycam.org/json/download/sequence/cb/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/1ogg/`
+`curl -L -o min-gas.pdb https://glycam.org/json/download/sequence/cb/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/1ogg/`
 
 Do be certain that there is not already a file with the same name in your directory.
 
@@ -296,7 +297,7 @@ just use the filename with no path. If you need to add paths, and if you use
 different file names, remember to edit the following to reflect your needs. Run
 the following command to submit your request:
 ```bash
-$ bash testTheAPI.sh build-sequence.json dev.glycam.org
+$ bash testTheAPI.sh build-sequence.json glycam.org
 ```
 > You can expect some chatty logs on your console, followed by a printout
 of your response object. This is also written to file, by the test script we just
@@ -319,7 +320,7 @@ An example curl request for checking the build status of the default structure i
 
 A request made to
 ```
-http://dev.glycam.org/json/project_status/sequence/<str:pUUID>/
+http://glycam.org/json/project_status/sequence/<str:pUUID>/
 
 ```
 
@@ -351,7 +352,7 @@ content of the url.
 
 A request made to
 ```
-https://dev.glycam.org/json/download/sequence/cb/<pUUID>/
+https://glycam.org/json/download/sequence/cb/<pUUID>/
 ```
 will return a minimized PDB file for that structure if it exists. The values in
 responses' downloadUrlPath all follow this pattern, and may be all you need.
@@ -364,7 +365,7 @@ poll for the build status.
 
 Using the following url:
 ```
-http://dev.glycam.org/json/build_status/<str:pUUID>/<str:conformerID>/
+http://glycam.org/json/build_status/<str:pUUID>/<str:conformerID>/
 ```
 We can receive a json object like the following:
 ```python
@@ -407,10 +408,10 @@ conformerIDs can be found, as well as a boolean to determine the default structu
         "isNewBuild": false,
         "structureDirectoryName": "1ogg",
         "filesystem_path": "/website/userdata/",
-        "host_url_base_path": "https://dev.glycam.org",
+        "host_url_base_path": "https://glycam.org",
         "conformer_path": "/website/userdata/sequence/cb/Builds/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/Requested_Builds/1ogg",
         "absolute_conformer_path": "/website/userdata/sequence/cb/Builds/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/Existing_Builds/1ogg",
->>>>>>>>"downloadUrlPath": "https://dev.glycam.org/json/download/sequence/cb/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/1ogg/",
+>>>>>>>>"downloadUrlPath": "https://glycam.org/json/download/sequence/cb/3c368bf2-ad73-43f3-a18d-d7d2dc11cf28/1ogg/",
         "forceField": "See Build Directory Files"
     },
 ```
