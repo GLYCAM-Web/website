@@ -48,12 +48,15 @@ services that GEMS provides:
 ## Evaluate
 The Evaluate service returns json-formatted information about options that are available for a
 requested structure. If you just want to know if we can build a sequence, this might
-be the service you prefer.
+be the service you prefer. As of Jan 2024, Evaluate also creates and minimizes a default structure. If you do not require a 
+specific conformer, you can skip the additional Build3DStructure request and move to the Polling or Download structure sections below.
 
 ## Build3DStructure
 The Build3DStructure service returns very similar data, along with the information you need to poll for statuses
 and download files. These requests can optionally define build options, if desired. If you only wish to retrieve 
-the default 3D structure, you can ignore the build options.
+the default 3D structure, you can ignore the build options. 
+### Warning
+As of Jan 2024, requesting a Build3DStructure without first running an Evaluate will cause problems. Until this is fixed and this warning removed, make sure you run Evaluate first.
 
 Requests to build a PDB file generate responses with these features:
 * A download url for a project. 
