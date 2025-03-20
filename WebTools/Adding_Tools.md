@@ -8,11 +8,11 @@ The basic steps are:
 1. Ensure that your code is portable.
 2. Generate a list of systems requirements (software with versions, specific hardware, etc.)
 3. Generate scripts or other executables or information so that the website can perform:
-    a. Validation of the environment and inputs.
-    b. Evaluation of the options available to the user and of the suitability of the inputs.
-    c. Execution of the scientific code.
-    d. Assessment of the statusof the code execution.
-3. Make user-friendly descriptions of the inputs and outputs. From these, the API for your tool
+    * Validation of the environment and inputs.
+    * Evaluation of the options available to the user and of the suitability of the inputs.
+    * Execution of the scientific code.
+    * Assessment of the statusof the code execution.
+4. Make user-friendly descriptions of the inputs and outputs. From these, the API for your tool
    will be constructed.
 
 **Keep the science in your code!** It is important that the website and GEMS only rarely be required 
@@ -34,7 +34,7 @@ Things that reduce portability:
 
 * Use of hard-coded paths that are specific to your system.
 * Reliance on specific versions of other software.
-* Use of environment variables.
+* Use of environment variables that are not explicitly referenced in your code.
 
 ## Validation 
 
