@@ -11,6 +11,8 @@ Development statuses:
 * B = An endpoint for building/running/executing the scientific code exists.
 * S = An endpoint for checking status exists.
 * A = The API has been generated.
+* G = The tool is integrated into GEMS.
+* W = The tool is integrated into the website code.
 * Sys = The systems needed for the online tool are in place.
 
 Deployment statuses:
@@ -20,11 +22,11 @@ Deployment statuses:
 * Live = The tool is deployed to Actual (glycam.org).
 
 
-| Tool                        | Development     | Deployment | Remaining |
-|-----------------------------|-----------------|------------|-----------|
-| Automated Antibody Docking  | P V E B S A Sys | Prod       | Dev, Live |
-| Glycomimetics               |                 |            |           |
-| Glycoprotein Builder        |                 |            |           |
-| GlySpec                     |                 |            |           |
+| Tool                        | Development         | Deployment | Remaining |
+|-----------------------------|---------------------|------------|-----------|
+| Automated Antibody Docking  | P V E B S A G W Sys | Prod       | Dev, Live |
+| Glycomimetics               |                     |            |           |
+| Glycoprotein Builder        |                     |            |           |
+| GlySpec                     |                     |            |           |
 
 
