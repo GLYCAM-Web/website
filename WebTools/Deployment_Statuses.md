@@ -2,31 +2,26 @@
 
 **Legend**
 
-Development statuses:
-
-* N = New. The code is usable only by the scientist.
-* P = Portable. The code can be used by others in other environments.
-* V = An endpoint for valiation exists.
-* E = An endpoint for evaluation exists.
-* B = An endpoint for building/running/executing the scientific code exists.
-* S = An endpoint for checking status exists.
-* A = The API has been generated.
-* G = The tool is integrated into GEMS.
-* W = The tool is integrated into the website code.
-* Sys = The systems needed for the online tool are in place.
-
-Deployment statuses:
-
-* Dev = The tool can be deployed and tested in the development platform.
-* Prod = The tool is being tested and refined in an online production-like environment.
-* Live = The tool is deployed to Actual (glycam.org).
+* New  -  The code is usable only by the scientist.
+* Portable  -  The code can be used by others in other environments.
+* Prototype  -  A prototype of this part of the web-tool has been generated.
+* API  -  The API has been generated.
+* DevEnv  -  The tool can be deployed and tested in the development platform.
+* Test  -  The tool is being tested and refined in an online production-like environment.
+* Actual  -  The tool is deployed to Actual (glycam.org).
 
 
-| Tool                        | Development         | Deployment | Remaining |
-|-----------------------------|---------------------|------------|-----------|
-| Automated Antibody Docking  | P V E B S A G W Sys | Prod       | Dev, Live |
-| Glycomimetics               |                     |            |           |
-| Glycoprotein Builder        |                     |            |           |
-| GlySpec                     |                     |            |           |
+| Tool                       | Validate  | Evaluate  | Build     | Status    | Remaining Work |
+| -------------------------- | --------- | --------- | --------- | --------- | -------------- |
+| Automated Antibody Docking | Test      | Test      | Test      | Prototype | DevEnv         |
+| Glycomimetics              | Test      | API       | API       | API       |                |
+| PDB Preprocessor           |           |           | Portable  |           |                |
+| Glycoprotein Builder       | Portable  | Portable  | API       | Portable  |                |
+| GlySpec                    | Prototype | Prototype | Prototype | Prototype |                |
+| DrawGlycan                 | n/a       | n/a       | Portable  | n/a       |                |
+| Emails from Web Tools      | n/a       | n/a       | Prototype | New       |                |
 
 
+Notes: 
+
+* Automated Antibody Docking cannot be deployed yet to our DevEnv despite being available in live sites.
