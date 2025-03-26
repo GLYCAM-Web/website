@@ -9,17 +9,18 @@
 * DevEnv  -  The tool can be deployed and tested in the development platform.
 * Test  -  The tool is being tested and refined in an online production-like environment.
 * Actual  -  The tool is deployed to Actual (glycam.org).
+* System - The underlying system dependencies needed for functionality in production.
 
 
 | Tool                       | Validate  | Evaluate  | Build     | Status    | Remaining Work |
 | -------------------------- | --------- | --------- | --------- | --------- | -------------- |
 | Automated Antibody Docking | Test      | Test      | Test      | Prototype | DevEnv         |
-| Glycomimetics              | Test      | API       | API       | API       |                |
-| PDB Preprocessor           |           |           | Portable  |           |                |
-| Glycoprotein Builder       | Portable  | Portable  | API       | Portable  |                |
-| GlySpec                    | Prototype | Prototype | Prototype | Prototype |                |
-| DrawGlycan                 | n/a       | n/a       | Portable  | n/a       |                |
-| Emails from Web Tools      | n/a       | n/a       | Prototype | New       |                |
+| Glycomimetics              | Test      | API       | API       | API       | DevEnv         |
+| Emails from Web Tools      | n/a       | n/a       | Prototype | New       | System         |
+| Glycoprotein Builder       | Portable  | Portable  | API       | Portable  | API, DevEnv    |
+| GlySpec                    | Prototype | Prototype | Prototype | Prototype | Rewrite        |
+| DrawGlycan                 | n/a       | n/a       | Portable  | n/a       | API, DevEnv    |
+| PDB Preprocessor           |           |           | Portable  |           | API, DevEnv    |
 
 
 Notes: 
