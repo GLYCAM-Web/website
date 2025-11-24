@@ -1,5 +1,10 @@
 # USAGE
 
+## Rate Limits on Website-Based API Use
+Rate limits on usage of the JSON API via our website are now in effect. 
+
+[More information.](Examples/JsonApi/Rate-Limits.md)
+
 ## Overview
 The JSON API provides an interface to the services made available by GEMS and GMML.
 
